@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 
 params_path = "params.yaml"
-schema_path = os.path.join("prediction_serice","schema_in.json")
+schema_path = os.path.join("prediction_service","schema_in.json")
 
 
 class NotInRange(Exception):
@@ -43,7 +43,7 @@ def predict(data):
 
 def get_schema(schema_path=schema_path):
     with open(schema_path) as json_file:
-        schema = json.safe_load(json_file)
+        schema = json.load(json_file)
     return schema
 
 
@@ -81,6 +81,8 @@ def api_response(dict_request):
             response = predict(data)
             response = {"response": response}
             return response
+
+            
     except Exception as e:
         response = {"The expected range": get_schema(),"response":str(e)}
         return response
