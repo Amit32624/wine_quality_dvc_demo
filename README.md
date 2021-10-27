@@ -5,7 +5,7 @@ conda create -n wineq python=3.8 -y
 
 activate env
 ```
-bash conda activate wineq
+conda activate wineq
 ```
 
 Create req file
