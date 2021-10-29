@@ -9,7 +9,7 @@ conda activate wineq
 ```
 
 Create req file
-```bash
+```
 pip install -r requirements.txt
 ```
 
