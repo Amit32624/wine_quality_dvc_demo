@@ -26,7 +26,7 @@ git add .
 git commit -m "Commmit message"
 
 TOX 
-``bash
+``
 tox
 ```
 
